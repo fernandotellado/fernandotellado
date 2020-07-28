@@ -2,7 +2,7 @@
 
 Bienvenido a mi repositorio de códigos útiles que suelo compartir en [Ayuda WordPress](https://ayudawp.com) y [WordPress Help Blog](https://wphelp.blog)
 
-Aqúi encontrarás recetas útiles de …
+Aquí encontrarás recetas útiles de …
 
 - [x] WordPress
 - [x] WooCommerce
