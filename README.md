@@ -1,4 +1,15 @@
-### Hi there 👋
+# Fernando tellado :metal:
+
+Bienvenido a mi repositorio de códigos útiles que suelo compartir en [Ayuda WordPress](https://ayudawp.com) y [WordPress Help Blog](https://wphelp.blog)
+
+Aqúi encontrarás recetas útiles de …
+
+- [x] WordPress
+- [x] WooCommerce
+- [x] WPO
+- [x] PHP
+- [ ] CSS
+- [ ] JS
 
 <!--
 **fernandotellado/fernandotellado** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
