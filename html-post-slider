@@ -1,0 +1,131 @@
+Te guste o no el plugin de carruseles de imágenes y vídeo <strong>Slider Revolution</strong> es uno de los más utilizados en WordPress. Es sencillo de usar, permite montones de personalizaciones y permite crear <strong>carruseles realmente impactantes, bonitos</strong>.
+<h2>El problema de Slider Revolution</h2>
+Ahora bien, <strong>su potencia se la debe a montones de scripts, estilos y fuentes que carga</strong> para poder ofrecer esos fantásticos efectos, y ahí está el problema: <strong>Las webs con Slider Revolution suelen ser más lentas</strong> que las que no lo tienen, y obtienen peores puntuaciones en las <a href="https://ayudawp.com/google-core-web-vitals-wordpress/">métricas web principales</a>.
+
+Esto es debido a que…
+<ul>
+ 	<li>Carga todo su JavaScript globalmente en todas las páginas de tu web, da igual si tienen un carrusel de Slider Revolution o no.</li>
+ 	<li>Carga todo su CSS globalmente en todas las páginas de tu web, da igual si tienen un carrusel de Slider Revolution o no.</li>
+ 	<li>Carga todo su JS y CSS en la cabecera de tus páginas.</li>
+ 	<li>Carga todas las fuentes de Google Fonts por defecto.</li>
+ 	<li>Carga la biblioteca de iconos Font Awesome aunque no los uses.</li>
+ 	<li>Hace un uso excesivo de jQuery.</li>
+ 	<li>Por defecto no hacer carga diferida de las imágenes.</li>
+</ul>
+Como verás son <strong>unos cuantos problemas a abordar</strong>.
+
+Uno estaría tentado rápidamente a optimizar mediante plugins de caché y optimización genéricos, pero vamos a echar el freno porque <strong>se puede optimizar, y mucho, la carga de Slider Revolution sin plugins adicionales</strong>.
+<h2>Cómo optimizar Slider Revolution</h2>
+¡Manos a la obra! Vamos a ver cómo <strong>optimizar Slider Revolution, sin plugins, para que tu web sea más rápida y consuma menos recursos</strong>.
+<h3>Optimiza las imágenes</h3>
+Para esto no necesitas ni plugins ni nada tampoco. El primer gran consejo es que <strong>subas imágenes a tus carruseles de Slider Revolution al tamaño adecuado de pantalla y con el menor peso de archivo posible</strong>.
+
+Si necesitas una imagen de un máximo de 1900 píxeles de ancho no la subas a 2500, y optimiza esa imagen antes de subirla a tu carrusel, mejor si el archivo pesa 100 Kb que si pesa 2 Mb.
+
+<img class="alignnone size-full wp-image-118730" src="https://ayudawp.com/wp-content/uploads/2021/06/optimizar-imagenes-squoosh.jpg" alt="" width="1200" height="649" />
+
+Tienes herramientas gratuitas como <a href="https://squoosh.app/" target="_blank" rel="nofollow noopener">Squoosh</a> que te facilitan ambas tareas de manera muy sencilla.
+<h3>No incluyas las bibliotecas de código globalmente</h3>
+Por defecto, <strong>Slider Revolution añade las bibliotecas de código JavaScript y estilos CSS globalmente, en todas las páginas de tu web</strong>, aunque solo tengas un carrusel en una de ellas.
+
+Para evitarlo y <strong>que solo se carguen en las páginas en las que realmente haya un carrusel de Slider Revolution</strong> haz lo siguiente:
+
+<img class="alignnone size-full wp-image-118741" src="https://ayudawp.com/wp-content/uploads/2021/06/ajustes-globales-Slider-Revolution.jpg" alt="" width="1286" height="624" />
+<ol>
+ 	<li>Ve a la administración de Slider Revolution y haz clic en el icono «<strong><em>Globals</em></strong>» para acceder a los ajustes globales.</li>
+ 	<li>Desactiva la opción llamada «<strong><em>Include libraries globally</em></strong>» que es la que, por defecto, incluye todo este código en toda tu web.</li>
+ 	<li>En la caja a la derecha de «<strong><em>List of pages to include RevSlider libraries</em></strong>» añade, separados por comas, los IDs de las páginas en las que sí quieres que se carguen las bibliotecas que necesita Slider Revolution para que funcionen los carruseles. Para saber cuál es el ID de una página o entrada edítala y en la URL aparecer el número ID como <code>post=1234</code>. Además, si quieres que se carguen en tu página de inicio incluye también el texto <code>homepage</code>.</li>
+</ol>
+<img class="alignnone size-full wp-image-118734" src="https://ayudawp.com/wp-content/uploads/2021/06/id-de-post-wordpress.jpg" alt="" width="301" height="42" />
+
+Ejemplo de configuración correcta, incluyendo varios ID de páginas y la portada:
+
+<img class="alignnone size-full wp-image-118735" src="https://ayudawp.com/wp-content/uploads/2021/06/optimizar-carga-bibliotecas-slider-revolution.jpg" alt="" width="462" height="90" />
+<h3>Inserta los scripts en el pie de página</h3>
+Por defecto, Slider Revolution carga sus scripts en la cabecera de tus páginas. Un modo de <strong>mejorar la experiencia de navegación, velocidad y optimizar la carga de tus páginas</strong> es insertar estos scripts en el pie de página.
+
+De nuevo, en los <strong>ajustes globales de Slider Revolution</strong>, activa la opción llamada «<strong><em>Insert scripts in footer</em></strong>»
+
+<img class="alignnone size-full wp-image-118736" src="https://ayudawp.com/wp-content/uploads/2021/06/insertar-scripts-slider-revolution-footer.jpg" alt="" width="447" height="73" />
+<h3>Aplaza la carga del JavaScript</h3>
+También <strong>mejorará el rendimiento de tu web</strong> aplazar la carga de todo el código JavaScript de Slider Revolution.
+
+Para ello activa la opción «<strong><em>Defer JavaScript loading</em></strong>».
+
+<img class="alignnone size-full wp-image-118737" src="https://ayudawp.com/wp-content/uploads/2021/06/aplazar-carga-javascript-slider-revolution.jpg" alt="" width="424" height="74" />
+<h3>Usa la carga diferida (lazy loading) de tu plugin favorito</h3>
+Slider Revolution no tiene ajustes avanzados globales para la carga diferida de imágenes, algo que sí puedes hacer con plugins como <a href="https://ayudawp.com/sg-optimizer/">SG Optimizer</a> o [eafl id="116079" name="WP-Rocket" text="WP Rocket"].
+
+Si quieres <strong>usar los ajustes de tu plugin de optimización favorito para la carga diferida de imágenes</strong> añade el parámetro de carga diferida del plugin en la caja a continuación de «<strong><em>3rd Party lazy loading data</em></strong>»
+
+Por ejemplo, si usas [eafl id="116079" name="WP-Rocket" text="WP Rocket"] el parámetro de carga es <code>lazy-src</code>, y en el de SG Optimizer <code>lazyload</code>.
+
+<img class="alignnone size-full wp-image-118738" src="https://ayudawp.com/wp-content/uploads/2021/06/lazy-load-slider-revolution-global.jpg" alt="" width="667" height="85" />
+<h3>Activa la caché interna de Slider Revolution</h3>
+No mucha gente sabe que <strong>Slider Revolution tiene su propio sistema de caché interno</strong> que guarda los carruseles como <strong>HTML</strong> para servirlos más rápidamente.
+
+Puedes activarla en la opción «<strong><em>Use internal caching</em></strong>» y hasta tienes un botón para vaciarla.
+
+<img class="alignnone size-full wp-image-118739" src="https://ayudawp.com/wp-content/uploads/2021/06/cache-slider-revolution.jpg" alt="" width="526" height="157" />
+<h3>Optimiza la carga de fuentes de Google</h3>
+También es recomendable <strong>activar la caché y precarga de las Google Fonts</strong> que usa Slider Revolution. En el ajuste «<strong><em>Enable Google Fonts download</em></strong>» puedes elegir entre:
+<ul>
+ 	<li><strong><em>Load from Google</em></strong>: Carga las fuentes desde Google en cada carga de página.</li>
+ 	<li><strong><em>Cache fonts local</em></strong>: Precarga y almacena localmente las fuentes de Google necesarias para servirlas más rápidamente.</li>
+ 	<li><strong><em>Disable, Load on your own</em></strong>: También puedes desactivar totalmente el uso de Google Fonts si realmente no las utilizas en ninguna diapositiva de tus carruseles con esta opción.</li>
+</ul>
+Cualquier opción entre la segunda y la tercera son mejores que la primera, por defecto. Si sabes que no usas ninguna Google Font la mejor es la última, ante la duda opta al menos por la segunda opción: <strong><em>Cache fonts local</em></strong>.
+
+<img class="alignnone size-full wp-image-118740" src="https://ayudawp.com/wp-content/uploads/2021/06/precarga-cache-fuentes-google-slider-revolution.jpg" alt="" width="730" height="101" />
+<h3>Ajustes avanzados por diapositiva</h3>
+Además de los anteriores ajustes globales, también hay <strong>ajustes avanzados en cada diapositiva que pueden ayudar a optimizar su carga</strong>.
+
+Para ello, edita tus carruseles y, en cada diapositiva, pásate por el icono «<strong><em>Advanced</em></strong>» de la sección de contenido, donde encontrarás varios ajustes de optimización.
+
+En concreto, debes revisar los siguientes ajustes:
+<ul>
+ 	<li><strong><em>Lazy Loading</em></strong>: Ajustes de carga diferida de la diapositiva, con varias opciones…
+<ol>
+ 	<li><em><strong>All</strong></em>: Carga diferida de todas las imágenes cada vez que se visualice la diapositiva.</li>
+ 	<li><strong><em>Smart</em></strong>: Carga diferida de la diapositiva actual, de la anterior y de la siguiente.</li>
+ 	<li><strong><em>Single</em></strong>: Carga diferida solo de la diapositiva actual</li>
+ 	<li><strong><em>No Lazy Loading</em></strong>: Carga de las imágenes inmediata, sin carga diferida.</li>
+</ol>
+</li>
+ 	<li><strong><em>Use cache</em></strong>: Puedes activar la caché solo en esta diapositiva o usar los ajustes globales.</li>
+ 	<li><strong><em>jQuery No Conflict Mode</em></strong>: Útil cuando haya errores de visualización o scripts al interferir la versión de jQuery de Slider Revolution con la de otros plugins o incluso WordPress.</li>
+ 	<li><strong><em>Put JS to Body</em></strong>: Al igual que vimos en los ajustes globales, pero esta vez a nivel de cada diapositiva, puedes cargar el JavaScript en el pie de página en vez de en la cabecera. No es necesario si lo hiciste ya en los ajustes globales.</li>
+</ul>
+Estos serían los ajustes recomendables:
+
+[gallery columns="2" size="medium" ids="118742,118743"]
+<blockquote><strong>Nota</strong>: Verás en la captura de los ajustes avanzados por diapositiva que pongo como recomendado no hacer carga diferida. Esto es debido a que normalmente estos carruseles suelen estar en la parte inicial de carga de la página, conocido como <em>above the fold</em>, y en esta sección las métricas web principales de Google no recomiendan aplicar carga diferida, para que el visitante vea de inmediato el contenido inicial de la página.</blockquote>
+<blockquote><strong>Nota</strong>: Si activaste la caché o poner el JS en el pie de página en los ajustes globales de Slider Revolution no es necesario que actives estos ajustes en cada diapositiva.</blockquote>
+
+<hr />
+
+¡Pues ya está! Como habrás visto, <strong>el equipo de desarrollo de Slider Revolution no está parado ni muchísimo menos, y ofrece ajustes de optimización muy interesantes en su plugin</strong>, que marcan <strong>enormes diferencias en cuanto al rendimiento y velocidad de carga de tu web sin los configuras correctamente</strong>, como espero haberte ayudado a hacer.
+
+A modo de resumen, <strong>aquí te dejo las capturas finales</strong> de cómo está configurado globalmente Slider Revolution por defecto y de cómo dejarlo configurado de manera óptima según hemos visto en esta guía:
+
+[gallery columns="2" size="medium" ids="118745,118744"]
+
+Cómo no, hay otras posibilidades…
+<h3>No uses Slider Revolution ;)</h3>
+Por último, pero no por ello menos importante …
+
+<strong>¿De verdad necesitas usar Slider Revolution?</strong>
+
+<strong>Los carruseles (sliders) siempre van a dar peores puntuaciones en las <a href="https://ayudawp.com/google-core-web-vitals-wordpress/">métricas web principales</a></strong> por el mero hecho de que hay contenido que no se muestra inicialmente, y eso lo penaliza el sistema de análisis de Google.
+
+Además, cargas varios archivos de imagen o vídeo en la primera parte de la web, sobrecargándola en exceso por pequeños que sean los archivos.
+
+Si por motivos estéticos, de diseño o conversión quieres tener una sección de cabecera con una gran imagen, texto y botones de acción, <strong>solo necesitas el bloque de fondo del editor de WordPress para ofrecer una fantástica página de inicio</strong> a tus visitantes, sin sobrecargarla con <strong>carruseles que la harán más lenta, por mucho que la optimices</strong>.
+
+[gallery columns="2" size="medium" ids="118732,118731"]
+
+Y, sobre todo, está más que demostrado que los carruseles son muy poco efectivos, solo un pequeño porcentaje de los usuarios (<a href="https://www.orbitmedia.com/blog/rotating-sliders-hurt-website/" target="_blank" rel="nofollow noopener">en torno al 16%</a>) llega siquiera a ver la segunda diapositiva del carrusel, y de estos, <a href="http://erikrunyon.com/2013/01/carousel-stats/" target="_blank" rel="nofollow noopener">solo un 6,8% termina haciendo clic en esta segunda diapositiva</a>. Entonces <strong>¿para qué mostrar más de una imagen si casi nadie la va a ver y menos hacer clic?</strong>
+
+<img class="alignnone size-full wp-image-118754" src="https://ayudawp.com/wp-content/uploads/2021/06/estadisticas-clics-diapositivas-sliders-web.png" alt="" width="600" height="315" />
+
+¿Aún quieres usar Slider Revolution? Pues nada, repasa los puntos anteriores y al menos <strong>optimiza Slider Revolution</strong>.
