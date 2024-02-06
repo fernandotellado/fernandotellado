@@ -8,7 +8,7 @@ Aquí encontrarás recetas útiles de …
 - [x] WooCommerce
 - [x] WPO
 - [x] PHP
-- [ ] CSS
+- [x] CSS
 - [ ] JS
 
 <!--
