@@ -1,6 +1,6 @@
 # Fernando tellado :metal:
 
-Bienvenido a mi repositorio de códigos útiles que suelo compartir en [Ayuda WordPress](https://ayudawp.com) y [WordPress Help Blog](https://wphelp.blog)
+Bienvenido a mi repositorio de códigos útiles que suelo compartir en [Ayuda WordPress](https://ayudawp.com) y aplicar a mis clientes de [Mantenimiento WordPress](https://mantenimiento.ayudawp.com)
 
 Aquí encontrarás recetas útiles de …
 
@@ -10,6 +10,7 @@ Aquí encontrarás recetas útiles de …
 - [x] PHP
 - [x] CSS
 - [ ] JS
+- [x] Inteligencia artificial (IA)
 
 <!--
 **fernandotellado/fernandotellado** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
