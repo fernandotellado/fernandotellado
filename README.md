@@ -9,7 +9,7 @@ Aquí encontrarás recetas útiles de …
 - [x] WPO
 - [x] PHP
 - [x] CSS
-- [ ] JS
+- [x] JS
 - [x] Inteligencia artificial (IA)
 
 <!--
