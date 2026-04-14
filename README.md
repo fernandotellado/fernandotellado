@@ -1,4 +1,4 @@
-# Fernando tellado :metal:
+# Fernando tellado :es:
 
 Bienvenido a mi repositorio de códigos útiles que suelo compartir en [Ayuda WordPress](https://ayudawp.com) y aplicar a mis clientes de [Mantenimiento WordPress](https://mantenimiento.ayudawp.com)
 
